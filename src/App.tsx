@@ -1,7 +1,7 @@
+import { Home, Intro } from '@features';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { registerRootComponent } from 'expo';
-import { Home, Intro } from './features';
 
 export type RootStackParamList = {
   Home: undefined;
