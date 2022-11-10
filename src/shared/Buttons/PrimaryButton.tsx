@@ -4,20 +4,20 @@ interface PrimaryButtonProps {
   onPress: () => void;
   text: string;
   a11y: {
-    accessibilityLabel:string;
+    accessibilityLabel: string;
     accessibilityHint: string;
-  }
+  };
 }
 export function PrimaryButton({ onPress, text, a11y }: PrimaryButtonProps) {
   return (
-    <View className="bg-primary rounded-2xl h-8 w-1/6 border border-white">
+    <View className="bg-primary rounded-2xl h-8 w-1/6 border border-slate-200">
       <TouchableOpacity
         onPress={onPress}
         className="flex-row justify-center items-center m-auto"
         accessible
         {...a11y}
       >
-        <Text>{text}</Text>
+        <Text className="text-white font-bold">{text}</Text>
       </TouchableOpacity>
     </View>
   );
