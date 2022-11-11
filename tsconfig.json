@@ -9,6 +9,7 @@
       "@shared": ["src/shared/index"],
       "@features": ["src/features/index"],
       "@zustandStore": ["src/zustand/index"],
+      "@utils": ["src/utils/index"]
     }
   }
 }

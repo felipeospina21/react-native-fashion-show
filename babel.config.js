@@ -1,23 +1,23 @@
-module.exports = function(api) {
+module.exports = function (api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      "nativewind/babel",
+      'nativewind/babel',
       [
-        "module-resolver",
+        'module-resolver',
         {
-          "alias": {
-            "@assets" : "./assets",
-            "@App" : "./src/App.tsx",
-            "@shared": "./src/shared",
-            "@features": "./src/features",
-            "@zustandStore": "./src/zustand/index"
-          }
-        }
+          alias: {
+            '@assets': './assets',
+            '@App': './src/App.tsx',
+            '@shared': './src/shared',
+            '@features': './src/features',
+            '@zustandStore': './src/zustand/index',
+            '@utils': './src/utils/index',
+          },
+        },
       ],
       'react-native-reanimated/plugin',
-  
-  ],
+    ],
   };
 };

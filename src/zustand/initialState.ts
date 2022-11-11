@@ -34,14 +34,15 @@ export const initialState: State = {
       isPressed: false,
       showText: false,
       text: 'texto calaca izq',
-      coordinates: { top: 180, left: 0 },
+      coordinates: { top: 220, left: 0 },
     },
     {
       id: 6,
       isPressed: false,
       showText: false,
       text: 'texto calaca der',
-      coordinates: { top: 180, left: '75%' },
+      coordinates: { top: 220, left: '75%' },
     },
   ],
+  count: 0,
 };

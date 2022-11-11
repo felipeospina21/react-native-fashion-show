@@ -12,10 +12,12 @@ export interface Point {
 }
 export type State = {
   points: Point[];
+  count: number;
 };
 
 export type Action = {
   markAsPressed: (id: number) => void;
   toggleText: (id: number) => void;
   resetState: () => void;
+  addCount: () => void;
 };

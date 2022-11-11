@@ -1,31 +1,46 @@
 import gameImage from '@assets/game.png';
-import { useStore } from '@zustandStore';
-import { useState } from 'react';
+import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
+import { createRef } from 'react';
 import { ImageBackground, View } from 'react-native';
-import { Counter, ScorePoints, ZoomControll } from './components';
+import { Counter, Hints, ZoomControll } from './components';
+import { ZoomButton } from './components/Zoom/ZoomButton';
 
 export function Game() {
-  const [count, setCount] = useState(0);
-  const { points } = useStore();
+  const zoomableViewRef = createRef<ReactNativeZoomableView>();
 
-  function addCount() {
-    setCount((prev) => prev + 100);
+  function zoomIn() {
+    zoomableViewRef.current?.zoomBy(0.1);
+  }
+
+  function zoomOut() {
+    zoomableViewRef.current?.zoomBy(-0.1);
   }
 
   return (
-    <ImageBackground
-      source={gameImage}
-      accessibilityLabel="imagen dia de los muertos"
-      accessibilityHint="imagen de fondo"
-      className="h-full"
-    >
-      <View className="h-full">
-        <Counter count={count} setCount={setCount} />
-        <ZoomControll />
-        {points.map((point, index) => (
-          <ScorePoints key={index} onPress={addCount} point={point} />
-        ))}
-      </View>
-    </ImageBackground>
+    <ReactNativeZoomableView minZoom={1} ref={zoomableViewRef}>
+      <ImageBackground
+        source={gameImage}
+        accessibilityLabel="imagen dia de los muertos"
+        accessibilityHint="imagen de fondo"
+        className="h-full w-full"
+      >
+        <View className="h-full">
+          <ZoomControll>
+            <ZoomButton
+              iconName="plus"
+              onPress={zoomIn}
+              a11y={{ label: 'zoom in', hint: 'aumentar tamano pantalla' }}
+            />
+            <ZoomButton
+              iconName="minus"
+              onPress={zoomOut}
+              a11y={{ label: 'zoom out', hint: 'disminuir tamano panalla' }}
+            />
+          </ZoomControll>
+          <Counter />
+          <Hints />
+        </View>
+      </ImageBackground>
+    </ReactNativeZoomableView>
   );
 }

@@ -1553,6 +1553,13 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
+"@openspacelabs/react-native-zoomable-view@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@openspacelabs/react-native-zoomable-view/-/react-native-zoomable-view-2.1.1.tgz#db7106212f6d81682f3038e30981213dd21985ba"
+  integrity sha512-rh3V+d/iQSS4ff3bmkky5gL83t7pRe+lkfshnhmX1Af0WqHNRUVT7swISmwDwnIFV+drlqv9DyNRx3gkcz9gZw==
+  dependencies:
+    prop-types "^15.7.2"
+
 "@react-native-community/cli-clean@^9.2.1":
   version "9.2.1"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli-clean/-/cli-clean-9.2.1.tgz#198c5dd39c432efb5374582073065ff75d67d018"
@@ -6434,7 +6441,7 @@ prompts@^2.3.2, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==

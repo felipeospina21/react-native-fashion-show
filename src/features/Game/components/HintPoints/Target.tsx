@@ -1,11 +1,11 @@
-import type { PrimaryButtonProps } from '@shared';
 import { TouchableOpacity, View } from 'react-native';
-interface TargetProps extends Omit<PrimaryButtonProps, 'text'> {
+
+interface TargetProps {
   onPress: () => void;
   isPressed: boolean;
 }
 
-export function Target({ isPressed, onPress, a11y }: TargetProps) {
+export function Target({ isPressed, onPress }: TargetProps) {
   const TARGET_CLASS = 'w-3 h-3 rounded-full';
   const NOT_PRESSED_CLASS = `${TARGET_CLASS} bg-red-500`;
   const PRESSED_CLASS = `${TARGET_CLASS} bg-yellow-500`;
@@ -15,7 +15,8 @@ export function Target({ isPressed, onPress, a11y }: TargetProps) {
         onPress={onPress}
         className="flex-row justify-center items-center m-auto"
         accessible
-        {...a11y}
+        accessibilityLabel="click aqui"
+        accessibilityHint="despliega texto informativo"
       >
         <View className="w-8 h-8 items-center justify-center rounded-full">
           <View className="w-6 h-6 bg-white flex items-center justify-center rounded-full">

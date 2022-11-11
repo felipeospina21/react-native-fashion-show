@@ -19,6 +19,9 @@ export const useStore = create<State & Action>((set) => ({
     }));
   },
   resetState: () => {
-    set(() => ({ points: initialState.points }));
+    set(() => ({ ...initialState }));
+  },
+  addCount: () => {
+    set((state) => ({ count: state.count + 100 }));
   },
 }));
