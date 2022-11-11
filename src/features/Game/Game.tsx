@@ -1,20 +1,11 @@
 import gameImage from '@assets/game.png';
+import { useZoom } from '@hooks';
 import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
-import { createRef } from 'react';
 import { ImageBackground, View } from 'react-native';
-import { Counter, Hints, ZoomControll } from './components';
-import { ZoomButton } from './components/Zoom/ZoomButton';
+import { Counter, Hints, ZoomButton, ZoomControll } from './components';
 
 export function Game() {
-  const zoomableViewRef = createRef<ReactNativeZoomableView>();
-
-  function zoomIn() {
-    zoomableViewRef.current?.zoomBy(0.1);
-  }
-
-  function zoomOut() {
-    zoomableViewRef.current?.zoomBy(-0.1);
-  }
+  const { zoomIn, zoomOut, zoomableViewRef } = useZoom();
 
   return (
     <ReactNativeZoomableView minZoom={1} ref={zoomableViewRef}>
