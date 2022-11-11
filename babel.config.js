@@ -13,7 +13,7 @@ module.exports = function (api) {
             '@shared': './src/shared',
             '@features': './src/features',
             '@zustandStore': './src/zustand/index',
-            '@utils': './src/utils/index',
+            '@hooks': './src/hooks/index',
           },
         },
       ],

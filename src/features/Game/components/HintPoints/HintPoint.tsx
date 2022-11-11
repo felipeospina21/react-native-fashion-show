@@ -1,7 +1,6 @@
+import { useFadeInAnimation } from '@hooks';
 import { Pulse } from '@shared';
-import { fadeInAnimation } from '@utils';
 import { Point, useStore } from '@zustandStore';
-import { useRef } from 'react';
 import { Animated, View } from 'react-native';
 import { InfoText } from './InfoText';
 import { Target } from './Target';
@@ -16,12 +15,11 @@ export function HintPoint({
   point: { text, coordinates, id, isPressed, showText },
 }: TargetProps) {
   const { markAsPressed, toggleText } = useStore();
-  const fadeAnimation = useRef(new Animated.Value(0)).current;
-
+  const { fadeAnimation, fadeIn } = useFadeInAnimation();
   function handlePress() {
     markAsPressed(id);
     toggleText(id);
-    if (!showText) fadeInAnimation(fadeAnimation);
+    if (!showText) fadeIn();
     if (!isPressed) onPress();
   }
   return (
