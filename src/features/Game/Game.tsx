@@ -1,12 +1,12 @@
 import gameImage from '@assets/game.png';
+import { useStore } from '@zustandStore';
 import { useState } from 'react';
 import { ImageBackground, View } from 'react-native';
 import { Counter, ScorePoints, ZoomControll } from './components';
-import { useStore } from '@zustandStore';
 
 export function Game() {
   const [count, setCount] = useState(0);
-  const { points } = useStore()
+  const { points } = useStore();
 
   function addCount() {
     setCount((prev) => prev + 100);
@@ -20,7 +20,7 @@ export function Game() {
       className="h-full"
     >
       <View className="h-full">
-        <Counter count={count} />
+        <Counter count={count} setCount={setCount} />
         <ZoomControll />
         {points.map((point, index) => (
           <ScorePoints key={index} onPress={addCount} point={point} />

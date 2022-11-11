@@ -17,4 +17,5 @@ export type State = {
 export type Action = {
   markAsPressed: (id: number) => void;
   toggleText: (id: number) => void;
+  resetState: () => void;
 };

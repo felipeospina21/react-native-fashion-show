@@ -11,6 +11,10 @@ module.exports = {
         light_glass: 'rgba(255, 255, 255, 0.7)',
         text_secondary: '#F4EEB2',
         text_primary: '#3E0B82',
+        pulse: {
+          bg: '#ff6090',
+          border: '#e91e63'
+        }
       },
     },
   },

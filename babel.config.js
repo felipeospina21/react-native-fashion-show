@@ -15,7 +15,8 @@ module.exports = function(api) {
             "@zustandStore": "./src/zustand/index"
           }
         }
-      ]
+      ],
+      'react-native-reanimated/plugin',
   
   ],
   };

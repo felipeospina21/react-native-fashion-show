@@ -1,6 +1,7 @@
 import { Point, useStore } from '@zustandStore';
 import { useRef } from 'react';
 import { Animated, Pressable, View } from 'react-native';
+import { Pulse } from '../../../shared/Animations/Pulse';
 import { InfoText } from './InfoText';
 import { Target } from './Target';
 
@@ -32,6 +33,7 @@ export function ScorePoints({
   }
   return (
     <View className="absolute top-10 left-10 flex items-center w-1/4" style={coordinates}>
+      {!isPressed && <Pulse />}
       <Animated.View className="w-full h-20" style={{ opacity: fadeAnimation }}>
         <Pressable
           accessible
