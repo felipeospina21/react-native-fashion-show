@@ -7,7 +7,8 @@
       "@assets": ["assets"],
       "@App": ["src/App.tsx"],
       "@shared": ["src/shared/index"],
-      "@features": ["src/features/index"]
+      "@features": ["src/features/index"],
+      "@zustandStore": ["src/zustand/index"],
     }
   }
 }

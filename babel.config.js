@@ -12,6 +12,7 @@ module.exports = function(api) {
             "@App" : "./src/App.tsx",
             "@shared": "./src/shared",
             "@features": "./src/features",
+            "@zustandStore": "./src/zustand/index"
           }
         }
       ]
