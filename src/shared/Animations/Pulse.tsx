@@ -1,33 +1,12 @@
-import { useEffect } from 'react';
-import Animated, {
-  Easing,
-  Extrapolate,
-  interpolate,
-  useAnimatedStyle,
-  useSharedValue,
-  withDelay,
-  withRepeat,
-  withTiming,
-} from 'react-native-reanimated';
+import Animated from 'react-native-reanimated';
+import { usePulseAnimatedStyle } from './hooks';
 
 interface PulseProps {
   delay?: number;
 }
 
 export function Pulse({ delay = 0 }: PulseProps) {
-  const animation = useSharedValue(0);
-
-  useEffect(() => {
-    animation.value = withDelay(
-      delay,
-      withRepeat(withTiming(1, { duration: 2000, easing: Easing.linear }), -1, false)
-    );
-  }, []);
-
-  const animatedStyles = useAnimatedStyle(() => {
-    const opacity = interpolate(animation.value, [0, 1], [0.6, 0], Extrapolate.CLAMP);
-    return { opacity: opacity, transform: [{ scale: animation.value }] };
-  });
+  const animatedStyles = usePulseAnimatedStyle(delay);
 
   return (
     <Animated.View
