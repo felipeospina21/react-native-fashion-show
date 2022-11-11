@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity, View } from 'react-native';
 
-interface PrimaryButtonProps {
+export interface PrimaryButtonProps {
   onPress: () => void;
   text: string;
   a11y: {
