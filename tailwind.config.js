@@ -4,7 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#450D41',
+        button:{
+          primary: 'rgba(43, 15, 90, 0.9)',
+        },
+        border: {
+          light: '#A79FE1'
+        },
+        bg:{
+          purple: 'rgba(70, 47, 153, 0.6)'
+        },
         dark_bg: '#110115',
         light_bg: '#ffffff',
         dark_glass: 'rgba(17, 1, 21, 0.5)',
@@ -16,6 +24,9 @@ module.exports = {
           border: '#e91e63'
         }
       },
+      fontFamily: {
+        porterSans: ['Porter-Sans']
+      }
     },
   },
   plugins: [],

@@ -1,12 +1,13 @@
-import { Game, Home, Intro } from '@features';
+import { Home, Man, Woman } from '@features';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { registerRootComponent } from 'expo';
 
+
 export type RootStackParamList = {
   Home: undefined;
-  Intro: undefined;
-  Game: undefined;
+  Woman: undefined;
+  Man: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -15,12 +16,13 @@ type Props = NativeStackScreenProps<RootStackParamList>;
 export type ProfileScreenNavigationProp = Props['navigation'];
 
 function App() {
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Intro" component={Intro} />
-        <Stack.Screen name="Game" component={Game} />
+        <Stack.Screen name="Woman" component={Woman} />
+        <Stack.Screen name="Man" component={Man} />
       </Stack.Navigator>
     </NavigationContainer>
   );
