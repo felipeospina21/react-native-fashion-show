@@ -8,10 +8,12 @@ module.exports = {
           primary: 'rgba(43, 15, 90, 0.9)',
         },
         border: {
-          light: '#A79FE1'
+          light: '#A79FE1',
+          gray: 'rgba(187, 184, 222, 1)',
         },
         bg:{
-          purple: 'rgba(70, 47, 153, 0.6)'
+          purple: 'rgba(70, 47, 153, 0.6)',
+          gray: 'rgba(187, 184, 222, 1)'
         },
         dark_bg: '#110115',
         light_bg: '#ffffff',
