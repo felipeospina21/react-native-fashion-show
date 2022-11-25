@@ -3,25 +3,25 @@ import maleHair from '@assets/man/thumb-hair.png';
 import malePants from '@assets/man/thumb-pants.png';
 import maleShirt from '@assets/man/thumb-shirt.png';
 import maleShoes from '@assets/man/thumb-shoes.png';
-import type { AssetTypeData } from '@shared';
-import { CharacterLayout } from '@shared';
+import type { AssetTypeData } from '@layouts';
+import { CharacterLayout } from '@layouts';
 
 export function Man() {
   const assets: AssetTypeData[] = [
     {
-      type: 'Hair',
+      type: 'hair',
       image: maleHair,
     },
     {
-      type: 'Shirts',
+      type: 'shirts',
       image: maleShirt,
     },
     {
-      type: 'Pants',
+      type: 'pants',
       image: malePants,
     },
     {
-      type: 'Shoes',
+      type: 'shoes',
       image: maleShoes,
     },
   ];

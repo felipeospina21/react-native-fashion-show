@@ -1,6 +1,7 @@
 import type { ImageSourcePropType } from 'react-native';
 
-export type AssetType = 'Hair' | 'Shirts' | 'Pants' | 'Shoes';
+export type AssetType = 'hair' | 'shirts' | 'pants' | 'shoes';
+export type Currency = 'coins' | 'gems'
 
 export interface AssetTypeData {
   type: AssetType;
@@ -13,6 +14,7 @@ export interface AssetData {
   image: string;
   price: {
     icon: string;
+    currency: Currency;
     value: number;
   };
 }

@@ -3,25 +3,25 @@ import womanPants from '@assets/woman/thumb-pants.png';
 import womanShirt from '@assets/woman/thumb-shirt.png';
 import womanShoes from '@assets/woman/thumb-shoes.png';
 import womanBody from '@assets/woman/woman-body1.png';
-import type { AssetTypeData } from '@shared';
-import { CharacterLayout } from '@shared';
+import type { AssetTypeData } from '@layouts';
+import { CharacterLayout } from '@layouts';
 
 export function Woman() {
   const assets: AssetTypeData[] = [
     {
-      type: 'Hair',
+      type: 'hair',
       image: womanHair,
     },
     {
-      type: 'Shirts',
+      type: 'shirts',
       image: womanShirt,
     },
     {
-      type: 'Pants',
+      type: 'pants',
       image: womanPants,
     },
     {
-      type: 'Shoes',
+      type: 'shoes',
       image: womanShoes,
     },
   ];

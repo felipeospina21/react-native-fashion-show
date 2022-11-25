@@ -4,24 +4,27 @@ import type { Action, State } from './types';
 
 export const useStore = create<State & Action>((set) => ({
   ...initialState,
-  markAsPressed: (id) => {
-    set((state) => ({
-      points: state.points.map((point) =>
-        point.id === id ? { ...point, isPressed: true } : point
-      ),
-    }));
+  useBalance: (type, cost) => {
+    set((state) => {
+      if (state.balance[type] >= cost) {
+        return {
+          balance: { ...state.balance, [type]: state.balance[type] - cost },
+        };
+      }
+      return state;
+    });
   },
-  toggleText: (id) => {
-    set((state) => ({
-      points: state.points.map((point) =>
-        point.id === id ? { ...point, showText: !point.showText } : { ...point, showText: false }
-      ),
-    }));
-  },
-  resetState: () => {
-    set(() => ({ ...initialState }));
-  },
-  addCount: () => {
-    set((state) => ({ count: state.count + 100 }));
+  buyAsset: ({ gender, type, id }) => {
+    set((state) => {
+      return {
+        assetsOwned: {
+          ...state.assetsOwned,
+          [gender]: {
+            ...state.assetsOwned[gender],
+            [type]: [...state.assetsOwned[gender][type], id],
+          },
+        },
+      };
+    });
   },
 }));

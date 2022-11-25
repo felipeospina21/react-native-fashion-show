@@ -1,23 +1,25 @@
-export interface Point {
-  id: number;
-  isPressed: boolean;
-  showText: boolean;
-  text: string;
-  coordinates: {
-    top?: number | string;
-    right?: number | string;
-    left?: number | string;
-    bottom?: number | string;
-  };
+import type { AssetType, Currency } from '@layouts';
+
+export interface AssetsOwned {
+  man: Record<AssetType, number[]>;
+  woman: Record<AssetType, number[]>;
 }
+
 export type State = {
-  points: Point[];
-  count: number;
+  balance: {
+    coins: number;
+    gems: number;
+  };
+  assetsOwned: AssetsOwned;
 };
 
+export type CharacterGender = 'man' | 'woman';
+interface BuyAsset {
+  gender: CharacterGender;
+  type: AssetType;
+  id: number;
+}
 export type Action = {
-  markAsPressed: (id: number) => void;
-  toggleText: (id: number) => void;
-  resetState: () => void;
-  addCount: () => void;
+  useBalance: (type: Currency, cost: number) => void;
+  buyAsset: ({ gender, type, id }: BuyAsset) => void;
 };

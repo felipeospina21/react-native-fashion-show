@@ -7,10 +7,11 @@
       "@assets": ["assets"],
       "@App": ["src/App.tsx"],
       "@shared": ["src/shared/index"],
-      "@features": ["src/features/index"],
+      "@views": ["src/views/index"],
       "@zustandStore": ["src/zustand/index"],
       "@hooks": ["src/hooks/index"],
-      "@mocks": ["src/mocks"],
+      "@mocks": ["src/mocks/index"],
+      "@layouts": ["src/layouts/index"],
     }
   }
 }
