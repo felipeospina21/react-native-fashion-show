@@ -14,6 +14,7 @@ module.exports = function (api) {
             '@features': './src/features',
             '@zustandStore': './src/zustand/index',
             '@hooks': './src/hooks/index',
+            '@mocks': './src/mocks',
           },
         },
       ],

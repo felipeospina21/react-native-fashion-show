@@ -2,7 +2,7 @@ import womanHair from '@assets/woman/thumb-hair.png';
 import womanPants from '@assets/woman/thumb-pants.png';
 import womanShirt from '@assets/woman/thumb-shirt.png';
 import womanShoes from '@assets/woman/thumb-shoes.png';
-import womanBody from '@assets/woman/woman-body.png';
+import womanBody from '@assets/woman/woman-body1.png';
 import type { AssetTypeData } from '@shared';
 import { CharacterLayout } from '@shared';
 
@@ -13,7 +13,7 @@ export function Woman() {
       image: womanHair,
     },
     {
-      type: 'Shirt',
+      type: 'Shirts',
       image: womanShirt,
     },
     {

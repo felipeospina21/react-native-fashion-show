@@ -9,7 +9,8 @@
       "@shared": ["src/shared/index"],
       "@features": ["src/features/index"],
       "@zustandStore": ["src/zustand/index"],
-      "@hooks": ["src/hooks/index"]
+      "@hooks": ["src/hooks/index"],
+      "@mocks": ["src/mocks"],
     }
   }
 }

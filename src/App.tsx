@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { registerRootComponent } from 'expo';
 
-
 export type RootStackParamList = {
   Home: undefined;
   Woman: undefined;
@@ -16,7 +15,6 @@ type Props = NativeStackScreenProps<RootStackParamList>;
 export type ProfileScreenNavigationProp = Props['navigation'];
 
 function App() {
-
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>

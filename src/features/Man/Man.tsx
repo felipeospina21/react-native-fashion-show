@@ -13,7 +13,7 @@ export function Man() {
       image: maleHair,
     },
     {
-      type: 'Shirt',
+      type: 'Shirts',
       image: maleShirt,
     },
     {

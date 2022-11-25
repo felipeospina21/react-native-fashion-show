@@ -3,8 +3,8 @@ import { Image, Text, View } from 'react-native';
 import type { ImageSourcePropType, TextStyle } from 'react-native'
 
 interface CostTagProps {
-  icon: ImageSourcePropType;
-  value: string;
+  icon: ImageSourcePropType | undefined;
+  value: number;
   textStyle? : TextStyle;
 }
 
