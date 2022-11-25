@@ -2,8 +2,8 @@ import home from '@assets/home-bg.png';
 import girl from '@assets/home-girl.png';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { useCallback} from 'react';
-import { Image, ImageBackground, View, StatusBar} from 'react-native';
+import { useCallback } from 'react';
+import { Image, ImageBackground, StatusBar, View } from 'react-native';
 import { GenderButtons, HomeTitle, MenuSvg } from './components';
 
 SplashScreen.preventAutoHideAsync();
@@ -12,7 +12,7 @@ export function Home() {
   const [fontsLoaded] = useFonts({
     'Porter-Sans': require('@assets/fonts/porter-sans-inline-block.otf'),
   });
-  
+
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
@@ -23,10 +23,9 @@ export function Home() {
     return null;
   }
 
-
   return (
     <ImageBackground source={home} onLayout={onLayoutRootView}>
-      <StatusBar/>
+      <StatusBar />
       <View className="flex items-center justify-end h-full">
         <View className="mb-[-50px]">
           <Image source={girl} accessibilityIgnoresInvertColors />

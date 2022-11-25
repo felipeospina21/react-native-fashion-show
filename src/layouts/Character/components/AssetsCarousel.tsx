@@ -1,9 +1,9 @@
+import { data } from '@mocks';
 import { useRoute } from '@react-navigation/native';
+import { CharacterGender } from '@zustandStore';
 import { FlatList, Text, View } from 'react-native';
 import type { AssetsState, AssetType } from '../types';
 import AssetCard from './AssetCard';
-import { data } from '@mocks'
-import { CharacterGender } from '@zustandStore';
 
 interface AssetsCarouselProps {
   title: AssetType;

@@ -1,1 +1,1 @@
-export * from './Man'
+export * from './Man';

@@ -4,7 +4,7 @@ import type { AssetsState } from '../types';
 
 interface CharacterBodyProps {
   imageSource: ImageSourcePropType;
-  assets: AssetsState
+  assets: AssetsState;
 }
 export function CharacterBody({
   imageSource,

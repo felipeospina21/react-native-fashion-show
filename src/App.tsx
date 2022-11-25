@@ -1,7 +1,7 @@
-import { Home, Man, Woman } from 'src/views';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { registerRootComponent } from 'expo';
+import { Home, Man, Woman } from 'src/views';
 
 export type RootStackParamList = {
   Home: undefined;

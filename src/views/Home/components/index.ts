@@ -1,3 +1,3 @@
-export * from './MenuSvg'
-export * from './HomeTitle'
-export * from './GenderButtons'
+export * from './GenderButtons';
+export * from './HomeTitle';
+export * from './MenuSvg';

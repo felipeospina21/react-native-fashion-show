@@ -6,16 +6,16 @@ export const initialState: State = {
   },
   assetsOwned: {
     man: {
-      hair:[],
-      shirts:[],
-      pants:[],
-      shoes:[],
+      hair: [],
+      shirts: [],
+      pants: [],
+      shoes: [],
     },
     woman: {
-      hair:[],
-      shirts:[],
-      pants:[],
-      shoes:[],
-    }
-  }
+      hair: [],
+      shirts: [],
+      pants: [],
+      shoes: [],
+    },
+  },
 };
