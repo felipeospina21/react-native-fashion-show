@@ -1,12 +1,13 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Home, Man, Woman } from '@views';
 import { registerRootComponent } from 'expo';
-import { Home, Man, Woman } from 'src/views';
 
 export type RootStackParamList = {
   Home: undefined;
   Woman: undefined;
   Man: undefined;
+  Other: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();

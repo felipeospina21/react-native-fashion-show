@@ -27,7 +27,7 @@ export function Home() {
     <ImageBackground source={home} onLayout={onLayoutRootView}>
       <StatusBar />
       <View className="flex items-center justify-end h-full">
-        <View className="mb-[-50px]">
+        <View className="mb-[-42px]">
           <Image source={girl} accessibilityIgnoresInvertColors />
         </View>
 

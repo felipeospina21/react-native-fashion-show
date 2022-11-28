@@ -11,7 +11,7 @@ module.exports = function (api) {
             '@assets': './assets',
             '@App': './src/App.tsx',
             '@shared': './src/shared',
-            '@views': './src/features',
+            '@views': './src/views',
             '@zustandStore': './src/zustand/index',
             '@hooks': './src/hooks/index',
             '@mocks': './src/mocks/index',
